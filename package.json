@@ -1,0 +1,27 @@
+{
+  "name": "cypresscucumberui",
+  "version": "1.0.0",
+  "description": "UI testing framework example",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldsku11/cypressCucumberUI.git"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Artur Muradov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oldsku11/cypressCucumberUI/issues"
+  },
+  "homepage": "https://github.com/oldsku11/cypressCucumberUI#readme",
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}

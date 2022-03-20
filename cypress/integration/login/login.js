@@ -1,6 +1,6 @@
 import loginPage from "../pages/loginPage"
-import productPage from "../pages/productPage";
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import productPage from "../pages/productPage"
+import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
 
 Given('Login page is opened', () => loginPage.navigateToLoginPage())
 

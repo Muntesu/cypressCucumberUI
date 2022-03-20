@@ -1,5 +1,8 @@
 class LoginPage{
 
+    standartUserName = 'standard_user'
+    standartUserPass = 'secret_sauce'
+
     elements = {
         userInput: () => cy.get('#user-name'),
         passwordInput: () => cy.get('#password'),
@@ -21,6 +24,13 @@ class LoginPage{
 
     clickLoginButton() {
         this.elements.loginButton().click()
+    }
+
+    login() {
+        this.navigateToLoginPage()
+        this.fillUsernameInput(this.standartUserName)
+        this.fillPasswordInput(this.standartUserPass)
+        this.clickLoginButton()
     }
 
     validateLockMessage() {

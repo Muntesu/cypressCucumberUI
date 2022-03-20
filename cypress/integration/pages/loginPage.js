@@ -4,7 +4,7 @@ class LoginPage{
         userInput: () => cy.get('#user-name'),
         passwordInput: () => cy.get('#password'),
         loginButton: () => cy.get('#login-button'),
-        errorMessage: () => cy.get('h3[data-test="error"]')
+        lockMessage: () => cy.get('h3[data-test="error"]')
     }
 
     navigateToLoginPage() {
@@ -21,6 +21,11 @@ class LoginPage{
 
     clickLoginButton() {
         this.elements.loginButton().click()
+    }
+
+    validateLockMessage() {
+        this.elements.lockMessage().should('be.visible')
+        this.elements.lockMessage().should('have.text', 'Epic sadface: Sorry, this user has been locked out.')
     }
 }
 

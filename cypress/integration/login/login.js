@@ -4,11 +4,13 @@ import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
 Given('Login page is opened', () => loginPage.navigateToLoginPage())
 
-Then('I enter the username {string} and the password {string}', (username, password) => {
+When('I enter the username {string} and the password {string}', (username, password) => {
     loginPage.fillUsernameInput(username)
     loginPage.fillPasswordInput(password)
 })
 
-Then('I click on the Login button', () => loginPage.clickLoginButton())
+When('I click on the Login button', () => loginPage.clickLoginButton())
 
-When('Product page opens', () => productPage.validateProductPage())
+Then('Product page opens', () => productPage.validateProductPage())
+
+Then('I see locked user message', () => loginPage.validateLockMessage())

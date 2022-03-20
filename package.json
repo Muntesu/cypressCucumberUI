@@ -4,7 +4,7 @@
   "description": "UI testing framework example",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "npx cypress run --spec 'cypress/integration/*.feature'"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-export class LoginPage{
+class LoginPage{
 
     elements = {
         userInput: () => cy.get('#user-name'),
@@ -23,3 +23,5 @@ export class LoginPage{
         this.elements.loginButton().click()
     }
 }
+
+module.exports = new LoginPage()

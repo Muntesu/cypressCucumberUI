@@ -4,7 +4,7 @@ class LoginPage{
         userInput: () => cy.get('#user-name'),
         passwordInput: () => cy.get('#password'),
         loginButton: () => cy.get('#login-button'),
-        lockMessage: () => cy.get('h3[data-test="error"]')
+        errorMessage: () => cy.get('h3[data-test="error"]')
     }
 
     navigateToLoginPage() {
@@ -24,8 +24,13 @@ class LoginPage{
     }
 
     validateLockMessage() {
-        this.elements.lockMessage().should('be.visible')
-        this.elements.lockMessage().should('have.text', 'Epic sadface: Sorry, this user has been locked out.')
+        this.elements.errorMessage().should('be.visible')
+        this.elements.errorMessage().should('have.text', 'Epic sadface: Sorry, this user has been locked out.')
+    }
+
+    validateBadCredsMessage() {
+        this.elements.errorMessage().should('be.visible')
+        this.elements.errorMessage().should('have.text', 'Epic sadface: Username and password do not match any user in this service')
     }
 }
 

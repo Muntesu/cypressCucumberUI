@@ -14,3 +14,5 @@ When('I click on the Login button', () => loginPage.clickLoginButton())
 Then('Product page opens', () => productPage.validateProductPage())
 
 Then('I see locked user message', () => loginPage.validateLockMessage())
+
+Then('I see wrong credentials message', () => loginPage.validateBadCredsMessage())

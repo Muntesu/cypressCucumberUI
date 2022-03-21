@@ -11,7 +11,11 @@ class LoginPage{
     }
 
     navigateToLoginPage() {
-        cy.visit('/')
+        try {
+            cy.visit('/')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     fillUsernameInput(username) {
